@@ -1,8 +1,6 @@
 const mys = (name) => {
-  console.log(`${name}mys`);
+  console.log(`${name} feel mys`);
 }
-if(typeof winodw === 'object'){
-  window.mys = mys
   function makeMulti (string) {
     let l = new String(string)
     l = l.substring(l.indexOf("/*")+3,l.lastIndexOf("*/"))
@@ -29,11 +27,12 @@ if(typeof winodw === 'object'){
                               yyyyyyy 
      */
   }
-  Object.defineProperty(window,'mys',{
-    get(){
-      console.log(makeMulti(string));
-    }
-  })
-}
+  if(typeof window === 'object'){
+    Object.defineProperty(window,'mys',{
+      get(){
+        console.log(makeMulti(string));
+      }
+    })
+  }
 
 export default mys

@@ -1,5 +1,4 @@
 import json from 'rollup-plugin-json'
-import {terser} from 'rollup-plugin-terser'
 export default {
   input: 'src/main.js',
   output: {
@@ -9,5 +8,5 @@ export default {
     banner: "/*mys*/",
     footer: "/*mys*/",
   },
-  plugins: [ json(),terser() ]
+  plugins: [ json() ]
 };
